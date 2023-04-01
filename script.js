@@ -13,7 +13,11 @@ const searchNameBTNClick = async () => {
 
     const res = await axios.post('https://kind-pike-hospital-gown.cyclic.app/search', query)
     $("#searchResults").empty()
-    $("#searchResults").html(JSON.stringify(res.data))
+    $("#searchResults").append(
+        `
+        <pre>${JSON.stringify(res.data, null, 4)}</pre>
+        `
+        )
 
 
 }
@@ -36,7 +40,11 @@ const searchWeightBTNClick = async () => {
     const res = await axios.post('https://kind-pike-hospital-gown.cyclic.app/search', query)
     // const res = await axios.post('http://localhost:3000/search', query)
     $("#searchResults").empty()
-    $("#searchResults").html(JSON.stringify(res.data))
+    $("#searchResults").append(
+        `
+        <pre>${JSON.stringify(res.data, null, 4)}</pre>
+        `
+        )
 
 
 }
@@ -66,8 +74,11 @@ const searchFoodBTNClick = async () => {
     const res = await axios.post('https://kind-pike-hospital-gown.cyclic.app/search', query)
     // const res = await axios.post('http://localhost:3000/search', query)
     $("#searchResults").empty()
-    $("#searchResults").html(JSON.stringify(res.data))
-
+    $("#searchResults").append(
+        `
+        <pre>${JSON.stringify(res.data, null, 4)}</pre>
+        `
+        )
 
 }
 
