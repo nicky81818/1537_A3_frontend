@@ -51,6 +51,7 @@ const searchWeightBTNClick = async () => {
 
 
 const searchFoodBTNClick = async () => {
+    $("#foods").empty()
     var nameFilter = $("#nameFilter").prop("checked")
     var weightFilter = $("#weightFilter").prop("checked")
     var apple = $("#foodInput1").prop("checked")
@@ -58,9 +59,19 @@ const searchFoodBTNClick = async () => {
     var loves_list = []
     if (apple) {
         loves_list.push("apple")
+        $("#foods").append(`
+        <a href="https://drawception.com/game/Rpm4wSMLXm/pinky-pie-eating-an-apple/">
+        <img src="https://cdn.drawception.com/images/panels/2012/7-1/Rpm4wSMLXm-6.png">
+        </a>
+        `)
     }
     if (carrot) {
         loves_list.push("carrot")
+        $("#foods").append(`
+        <a href="https://drawception.com/game/3KRgtjHpG1/unicorn-and-carrot/">
+        <img src="https://cdn.drawception.com/images/panels/2014/9-8/3KRgtjHpG1-12.png">
+        </a>
+        `)
     }
     const query = {
         type: "foodSearch", 
